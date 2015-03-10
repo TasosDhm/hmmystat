@@ -1,2 +1,2 @@
-require 'hmmystat.rb'
+require './hmmystat'
 run Sinatra::Application
