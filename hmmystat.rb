@@ -1,7 +1,7 @@
 require 'sinatra'
-# require 'tiny_tds'
+require 'tiny_tds'
 
-# $database_client = TinyTds::Client.new username: 'sa', password: 'hmmystat', host: 'kingc.no-ip.org', database: 'HMMYStat'
+$database_client = TinyTds::Client.new username: 'sa', password: 'hmmystat', host: 'kingc.no-ip.org', database: 'HMMYStat'
 
 # result = $database_client.execute("SELECT Id FROM [Students] WHERE Id = 7422")
 # id = result.each
