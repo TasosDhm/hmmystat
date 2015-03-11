@@ -6,7 +6,7 @@ require 'sinatra'
 # result = $database_client.execute("SELECT Id FROM [Students] WHERE Id = 7422")
 # id = result.each
 # result.cancel
-
+# asdasd
 def database_read_table_attrs tables
 	puts tables
 end
