@@ -1,0 +1,54 @@
+<html lang='en'>
+<head>
+  <title>Nyaplot</title>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.14/require.min.js"></script>
+  <script>if(window['d3'] === undefined ||
+   window['Nyaplot'] === undefined){
+    var path = {"d3":"http://d3js.org/d3.v3.min"};
+
+
+
+    var shim = {"d3":{"exports":"d3"}};
+
+    require.config({paths: path, shim:shim});
+
+
+require(['d3'], function(d3){window['d3']=d3;console.log('finished loading d3');
+
+	var script = d3.select("head")
+	    .append("script")
+	    .attr("src", "http://cdn.rawgit.com/domitry/Nyaplotjs/master/release/nyaplot.js")
+	    .attr("async", true);
+
+	script[0][0].onload = script[0][0].onreadystatechange = function(){
+
+
+	    var event = document.createEvent("HTMLEvents");
+	    event.initEvent("load_nyaplot",false,false);
+	    window.dispatchEvent(event);
+	    console.log('Finished loading Nyaplotjs');
+
+	};
+
+
+});
+}
+</script>
+</head>
+<body><div id='vis-b840e383-a416-4824-bb40-b7351a36533b'></div>
+<script>
+(function(){
+    var render = function(){
+        var model = {"panes":[{"diagrams":[{"type":"bar","options":{"x":"data0","y":"data1"},"data":"b6f9998f-a43e-4298-8c3f-5c4874981406"}],"options":{"x_label":"Title","y_label":"Subscribed","width":1500,"height":750,"legend":true,"rotate_x_label":300,"xrange":["Ανάλυση και Σχεδιασμός Αλγορίθμων","Αρχιτεκτονική Υπολογιστών (ΠΠΣ)","Διάδοση Ηλεκτρομαγνητικού Κύματος II","Διακριτά Μαθηματικά","Εισαγωγή στις Εφαρμογές της Πυρηνικής Τεχνολογίας","Επιχειρησιακή Έρευνα","Ηλεκτρακουστική Ι","Ηλεκτρικές Μετρήσεις ΙΙ","Ηλεκτρονική ΙΙΙ","Ημιαγωγά Υλικά","Μετάδοση Θερμότητας","Οπτική Ι","Ρομποτική","Συστήματα Αυτομάτου Ελέγχου II","Συστήματα Ηλεκτρικής Ενέργειας I","Τεχνικές Βελτιστοποίησης","Τηλεπικοινωνιακά Συστήματα Ι","Υψηλές Τάσεις 1","Ψηφιακά Συστήματα ΙΙ","Ψηφιακές Τηλεπικοινωνίες Ι"],"yrange":[0,295]}}],"data":{"b6f9998f-a43e-4298-8c3f-5c4874981406":[{"data0":"Ανάλυση και Σχεδιασμός Αλγορίθμων","data1":211},{"data0":"Αρχιτεκτονική Υπολογιστών (ΠΠΣ)","data1":220},{"data0":"Διάδοση Ηλεκτρομαγνητικού Κύματος II","data1":239},{"data0":"Διακριτά Μαθηματικά","data1":295},{"data0":"Εισαγωγή στις Εφαρμογές της Πυρηνικής Τεχνολογίας","data1":287},{"data0":"Επιχειρησιακή Έρευνα","data1":210},{"data0":"Ηλεκτρακουστική Ι","data1":284},{"data0":"Ηλεκτρικές Μετρήσεις ΙΙ","data1":218},{"data0":"Ηλεκτρονική ΙΙΙ","data1":276},{"data0":"Ημιαγωγά Υλικά","data1":227},{"data0":"Μετάδοση Θερμότητας","data1":280},{"data0":"Οπτική Ι","data1":260},{"data0":"Ρομποτική","data1":285},{"data0":"Συστήματα Αυτομάτου Ελέγχου II","data1":213},{"data0":"Συστήματα Ηλεκτρικής Ενέργειας I","data1":202},{"data0":"Τεχνικές Βελτιστοποίησης","data1":252},{"data0":"Τηλεπικοινωνιακά Συστήματα Ι","data1":284},{"data0":"Υψηλές Τάσεις 1","data1":290},{"data0":"Ψηφιακά Συστήματα ΙΙ","data1":204},{"data0":"Ψηφιακές Τηλεπικοινωνίες Ι","data1":248}]},"extension":[]}
+        Nyaplot.core.parse(model, '#vis-b840e383-a416-4824-bb40-b7351a36533b');
+    };
+    if(window['Nyaplot']==undefined){
+        window.addEventListener('load_nyaplot', render, false);
+	return;
+    } else {
+       render();
+    }
+})();
+</script>
+</body>
+</html>
