@@ -4,7 +4,7 @@ require 'nyaplot'
 
 set :bind, '0.0.0.0'
 
-$database_client = TinyTds::Client.new username: 'sa', password: 'hmmystat', host: 'kingc.no-ip.org', database: 'HMMYStat'
+$database_client = TinyTds::Client.new username: '', password: '', host: 'kingc.no-ip.org', database: 'HMMYStat'
 $database_tables = []
 $query_tables = []
 
